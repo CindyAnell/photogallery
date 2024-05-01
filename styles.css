@@ -1,11 +1,18 @@
 /* COLOR #007d7b*/
 
+body{
+    width:485px;
+    margin:0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 html{
     background-color: #000000;
     color: #ffffff;
     font-family:Arial, Helvetica, sans-serif;
    
 }
+
 
 h1{
     background-color: #ffffff;
@@ -16,45 +23,181 @@ h1{
 
 main {
     background-color: #ffffff;
-    color:#000000;
+    align-content: center;
+
    
 }
 
-a {
+
+nav a {
     text-transform: uppercase;
     font-size: 1.5em;
+    color:#ffffff;
     text-decoration: none;
 
 }
 
-li{
+nav li{
     display:inline;
     padding-inline: 10px;
     color:#ffffff;
-    
 }
 
-/*BACK TO TOP BUTTON*/
-.top{
-    position: sticky;
-    top:0px;
-    width: 20%;
-    background-color: white;
-    text-align: center;
-    border: 3px solid #000000;
-    color: #000000;
-    border-radius: 80px;
-    float: right;
-    padding: 10px;
+nav h2{
+    visibility: hidden;
 }
 
-#about{
-    text-align: center;
-}
 
 #about ,h2{
     text-align: center;
+    color:#000000;
 }
+
+#gallery{
+    color:#000000;
+}
+
+p{
+    text-align: left;
+    color:#000000;
+}
+
+
+/* Fig captions */
+
+figure {
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  figcaption {
+    color: #000000;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
 
 /*CONTACT FORM*/
 
+
+form{
+	width: 300px;
+	margin: 10px auto; 
+}
+
+input, textarea{
+	display: block;
+	width: 100%;
+    color:#007d7b;
+    
+}
+
+textarea{
+    color:#007d7b;
+}
+
+
+label{
+    color: #000000;
+    text-transform: uppercase;
+
+}
+
+input[type="submit"]{
+	background-color: #007d7b;
+	border: none;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+input[type=text]{
+    color:#007d7b;
+}
+
+#contact p {
+    text-align: center;
+    color:#ffffff;
+
+}
+
+
+footer{
+    position:relative;
+    text-transform: uppercase;
+  
+    
+}
+/*medium screen css*/
+
+@media screen and (min-width:880px){
+    body{
+        width:880px;
+    }
+
+    ul{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #gallery section figure img{
+        display:flex;
+        flex-wrap: wrap;
+        gap:10px;
+
+    }
+
+}
+
+   /* #gallery {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px; 
+      }
+      
+      #gallery section {
+        width: calc(50% - 5px); 
+      }
+      
+      #gallery section figure img {
+        max-width: 100%; 
+      }
+      
+}*/
+
+
+/*large screen css*/
+
+@media screen and (min-width:1300px){
+    body{
+        width:1300px;
+    }
+
+    ul{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #gallery {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px; 
+      }
+      
+      #gallery section {
+        width: 30%; 
+      }
+      
+      #gallery section figure img {
+        max-width: 100%; 
+      }
+      
+
+ 
+}
